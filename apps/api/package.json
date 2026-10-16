@@ -1,0 +1,32 @@
+{
+  "name": "@tkl/api",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "scripts": {
+    "build": "node --check src/app.js && node --check src/event-loop.js && node --check src/read-through-knowledge-service.js && node --check src/ticket-context-job-store.js && node --check src/ticket-context-coordinator.js && node --check src/cross-source-context-coordinator.js && node --check src/jira-webhook-service.js && node --check src/jira-description.js && node --check src/qa-brain-knowledge.js && node --check src/approved-action-service.js && node --check src/approved-action-store.js && node --check src/source-action-executor.js && node --check src/github-repository-store.js && node --check src/agents/coverage-context-agent.js && node --check src/agents/test-designer-agent.js && node --check src/agents/testrail-improvement-agent.js && node --check src/agents/automation-designer-agent.js && node --check src/agents/reliability-defect-intelligence-agent.js && node --check src/agents/knowledge-curator-agent.js && node --check src/agents/product-reasoning-planner.js && node --check src/agents/read-only-investigation-provider.js && node --check src/agents/ask-feedback-service.js && node --check src/agents/ask-tkl-agent.js && node --check src/http-server.js && node --check src/index.js && node --check src/knowledge-service.js && node --check src/knowledge-inventory-service.js && node --check src/source-connection-service.js && node --check src/source-connection-validation.js && node --check src/source-sync.js && node --check src/server.js",
+    "typecheck": "npm run build",
+    "test": "node --experimental-strip-types --test",
+    "test:contract": "node --experimental-strip-types --test",
+    "lint": "npm run build",
+    "test:context-jobs": "node --experimental-strip-types --test test/ticket-context-job-store.test.js test/ticket-context-coordinator.test.js test/ticket-context-api.test.js test/jira-webhook-service.test.js test/read-through-knowledge-service.test.js",
+    "start": "node --experimental-strip-types src/server.js"
+  },
+  "dependencies": {
+    "@tkl/analyzer-conflicts": "0.1.0",
+    "@tkl/analyzer-coverage": "0.1.0",
+    "@tkl/core": "0.3.0",
+    "@tkl/credential-vault": "0.1.0",
+    "@tkl/evaluation": "0.1.0",
+    "@tkl/knowledge-store": "0.1.0",
+    "@tkl/normalizer-github": "0.1.0",
+    "@tkl/normalizer-jira": "0.1.0",
+    "@tkl/normalizer-testrail": "0.1.0",
+    "@tkl/normalizer-confluence": "0.1.0",
+    "@tkl/normalizer-reportportal": "0.1.0",
+    "@tkl/ingestion": "0.1.0",
+    "@tkl/raw-evidence-store": "0.1.0",
+    "@tkl/sync-coordinator": "0.1.0"
+  }
+}

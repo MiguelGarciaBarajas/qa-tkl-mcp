@@ -1,0 +1,48 @@
+{
+  "configVersion": "0.1",
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "enabledPlugins": [
+    "connector.github"
+  ],
+  "plannedPlugins": [
+    "connector.jira",
+    "connector.testrail",
+    "connector.confluence",
+    "connector.reportportal"
+  ],
+  "credentialRefs": {
+    "connector.jira": "secret://jira/fl-titling",
+    "connector.github": "secret://github/fl-titling",
+    "connector.testrail": "secret://testrail/fl-titling",
+    "connector.confluence": "secret://confluence/fl-titling",
+    "connector.reportportal": "secret://reportportal/fl-titling"
+  },
+  "sources": {
+    "jira": {
+      "enabled": false,
+      "configurationStatus": "pending-external-input",
+      "baseUrl": "https://jira.app.solera.com/jira"
+    },
+    "github": {
+      "enabled": true,
+      "configurationStatus": "ready",
+      "repository": "Solera-Engineering/qa-tkl-mcp-f5"
+    },
+    "testrail": {
+      "enabled": false,
+      "configurationStatus": "pending-external-input",
+      "baseUrlEnv": "TESTRAIL_BASE_URL",
+      "projectIdEnv": "TESTRAIL_PROJECT_ID",
+      "suiteScope": "all"
+    },
+    "confluence": {
+      "enabled": false,
+      "configurationStatus": "pending-external-input"
+    },
+    "reportportal": {
+      "enabled": false,
+      "configurationStatus": "pending-external-input"
+    }
+  }
+}

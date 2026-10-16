@@ -1,0 +1,25 @@
+{
+  "name": "@tkl/live-smoke",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Opt-in, sanitized live-source smoke test harness for the real connectors (LIVE-101)",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "node --check src/index.js && node --check bin/run.js",
+    "typecheck": "node --check src/index.js && node --check bin/run.js",
+    "test": "node --experimental-strip-types --test",
+    "test:contract": "node --experimental-strip-types --test",
+    "lint": "node --check src/index.js && node --check bin/run.js"
+  },
+  "dependencies": {
+    "@tkl/contracts": "0.1.0",
+    "@tkl/ingestion": "0.1.0"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}

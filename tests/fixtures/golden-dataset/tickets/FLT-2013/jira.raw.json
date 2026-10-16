@@ -1,0 +1,30 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2013",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2013",
+  "observedAt": "2026-08-03T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "e96db1cc170654c9d2e0b77d22af938c1b570b05c053db1aef6fa1599f387e30",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2013",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can split a joint title into two individual titles",
+      "description": "As a clerk I can split a joint title into two individual titles. Two pull requests, an initial implementation and a follow-up fix, both explicitly reference this ticket.",
+      "acceptanceCriteria": [
+        "Given a signed split agreement, two new titles are issued.",
+        "Given only one signature, the split request stays pending.",
+        "Given conflicting VINs, the split is rejected."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

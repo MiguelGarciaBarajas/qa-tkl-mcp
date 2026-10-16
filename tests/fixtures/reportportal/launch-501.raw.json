@@ -1,0 +1,73 @@
+{
+  "launch": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "reportportal",
+    "sourceId": "501",
+    "sourceVersion": "1",
+    "sourceUrl": "https://reportportal.example/ui/#fl-titling/launches/all/501",
+    "observedAt": "2026-09-10T18:00:00.000Z",
+    "contentType": "reportportal.launch",
+    "contentHash": "sha256-fixture-reportportal-launch-501",
+    "classification": "internal",
+    "payload": {
+      "id": 501,
+      "name": "Nightly regression",
+      "status": "FAILED",
+      "startTime": 1757520000000,
+      "endTime": 1757520900000
+    }
+  },
+  "itemWithDefect": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "reportportal",
+    "sourceId": "9001",
+    "sourceVersion": "1",
+    "sourceUrl": "https://reportportal.example/ui/#fl-titling/launches/all/501/9001",
+    "observedAt": "2026-09-10T18:00:00.000Z",
+    "contentType": "reportportal.test_item",
+    "contentHash": "sha256-fixture-reportportal-item-9001",
+    "classification": "internal",
+    "payload": {
+      "id": 9001,
+      "name": "should reconcile fee lines with invoice",
+      "launchId": 501,
+      "status": "FAILED",
+      "startTime": 1757520000000,
+      "endTime": 1757520030000,
+      "codeRef": "billing/fee-lines.spec.ts#should reconcile fee lines with invoice",
+      "retry": false,
+      "issue": {
+        "issueType": "PB001",
+        "externalSystemIssues": [
+          { "ticketId": "FLT-4821", "url": "https://tracker.example/browse/FLT-4821", "btsProjectId": "FLT" }
+        ]
+      }
+    }
+  },
+  "itemWithoutDefect": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "reportportal",
+    "sourceId": "9002",
+    "sourceVersion": "1",
+    "sourceUrl": "https://reportportal.example/ui/#fl-titling/launches/all/501/9002",
+    "observedAt": "2026-09-10T18:00:00.000Z",
+    "contentType": "reportportal.test_item",
+    "contentHash": "sha256-fixture-reportportal-item-9002",
+    "classification": "internal",
+    "payload": {
+      "id": 9002,
+      "name": "should reject negative fee amounts",
+      "launchId": 501,
+      "status": "FAILED",
+      "startTime": 1757520030000,
+      "endTime": 1757520060000,
+      "retry": false,
+      "issue": {
+        "issueType": "PB001"
+      }
+    }
+  }
+}

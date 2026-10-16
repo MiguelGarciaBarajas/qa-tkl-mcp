@@ -1,0 +1,19 @@
+{
+  "name": "@tkl/connector-confluence",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "node --check src/index.js && node --check src/http.js && node --check src/confluence-http-client.js",
+    "typecheck": "node --check src/index.js && node --check src/http.js && node --check src/confluence-http-client.js",
+    "test": "node --experimental-strip-types --test",
+    "test:contract": "node --experimental-strip-types --test",
+    "lint": "node --check src/index.js && node --check src/http.js && node --check src/confluence-http-client.js"
+  },
+  "dependencies": {
+    "@tkl/contracts": "0.1.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "confluence",
+  "sourceId": "111",
+  "sourceVersion": "3",
+  "sourceUrl": "https://confluence.example/wiki/pages/viewpage.action?pageId=111",
+  "observedAt": "2026-09-10T16:00:00.000Z",
+  "contentType": "confluence.page",
+  "contentHash": "sha256-fixture-confluence-page-111",
+  "classification": "internal",
+  "payload": {
+    "id": "111",
+    "type": "page",
+    "status": "current",
+    "title": "Billing fee lines requirement",
+    "space": { "key": "QA" },
+    "version": { "number": 3, "when": "2026-09-10T16:00:00.000Z" },
+    "body": {
+      "storage": {
+        "value": "<p>Fee lines <strong>must</strong> reconcile with invoiced deals.</p>"
+      }
+    },
+    "metadata": {
+      "labels": {
+        "results": [{ "name": "Requirement" }, { "name": "billing" }]
+      }
+    }
+  }
+}

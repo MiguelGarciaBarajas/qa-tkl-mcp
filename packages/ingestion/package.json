@@ -1,0 +1,31 @@
+{
+  "name": "@tkl/ingestion",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Config-driven registration and composition of source connectors (ING-104)",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "node --check src/index.js",
+    "typecheck": "node --check src/index.js",
+    "test": "node --experimental-strip-types --test",
+    "test:contract": "node --experimental-strip-types --test",
+    "lint": "node --check src/index.js"
+  },
+  "dependencies": {
+    "@tkl/contracts": "0.1.0",
+    "@tkl/core": "0.3.0",
+    "@tkl/plugin-registry": "0.1.0",
+    "@tkl/connector-jira": "0.1.0",
+    "@tkl/connector-github": "0.1.0",
+    "@tkl/connector-testrail": "0.1.0",
+    "@tkl/connector-confluence": "0.1.0",
+    "@tkl/connector-reportportal": "0.1.0"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}

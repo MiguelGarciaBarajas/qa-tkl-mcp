@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2003",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2003",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "6d546d88ec53d73da34c9b09c0842236c852bb105dd6588f2864fbbe67484f4d",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2003",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can transfer title ownership between two parties",
+      "description": "As a clerk I can transfer title ownership between two parties. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given both parties sign the transfer, ownership updates immediately.",
+        "Given only one party signs, the transfer remains pending."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

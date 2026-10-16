@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2001",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2001",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "a94fe12ff9481e89ae8eabe100029c10d3137e5b03baed781e9553ed2c220038",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2001",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can submit a title application with a valid VIN",
+      "description": "As a clerk I can submit a title application with a valid VIN. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a valid 17-character VIN, the application is accepted.",
+        "Given an invalid VIN checksum, the application is rejected with an error."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

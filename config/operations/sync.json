@@ -1,0 +1,16 @@
+{
+  "fl-titling": {
+    "batchSize": 100,
+    "overlapPolicy": "skip",
+    "schedule": {
+      "cadence": "external-cron",
+      "configurationStatus": "pending-external-input",
+      "timezone": "UTC"
+    },
+    "retention": {
+      "mode": "report-only",
+      "rawEvidenceMaxAgeDays": null,
+      "historyMaxEntries": null
+    }
+  }
+}

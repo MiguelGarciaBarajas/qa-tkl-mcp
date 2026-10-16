@@ -1,0 +1,27 @@
+{
+  "name": "@tkl/plugin-registry",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "node --check src/index.js && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --experimental-strip-types --test && tsc -p tsconfig.json",
+    "test:contract": "node --experimental-strip-types --test && tsc -p tsconfig.json",
+    "lint": "node --check src/index.js"
+  },
+  "dependencies": {
+    "@tkl/contracts": "0.1.0"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}

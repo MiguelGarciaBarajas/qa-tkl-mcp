@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2011",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2011",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "17f6b79bda9be4f20c471c179f036da1950834a197bf75feb68c1f0e0be50a4f",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2011",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can issue a title for a homemade trailer",
+      "description": "As a clerk I can issue a title for a homemade trailer. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a completed weight-and-dimension affidavit, the trailer title is issued.",
+        "Given a missing affidavit, the request is held for additional information."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

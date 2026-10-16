@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2012",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2012",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "eee1168736bc29805c5e43275807a9daa7a3772975aa82c9f6382ce0d8f6ceaa",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2012",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can process a title for a vehicle donated to charity",
+      "description": "As a clerk I can process a title for a vehicle donated to charity. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a signed donation acknowledgment, ownership transfers to the charity."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

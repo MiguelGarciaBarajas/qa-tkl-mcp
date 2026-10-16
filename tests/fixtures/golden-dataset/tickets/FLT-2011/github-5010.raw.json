@@ -1,0 +1,24 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "github",
+  "sourceId": "Solera-Engineering/fl-titling#5010",
+  "sourceVersion": "03531386ad6cad60cadd4159071c5438886f65af",
+  "sourceUrl": "https://github.com/Solera-Engineering/fl-titling/pull/5010",
+  "observedAt": "2026-08-02T09:00:00.000Z",
+  "contentType": "application/vnd.github.pull-request+json",
+  "contentHash": "e4862df6079729756adf9b30540973c78dd0cec13c0c70ea9e8c54f48bdde64f",
+  "classification": "internal",
+  "payload": {
+    "number": 5010,
+    "title": "Cover FLT-2011 acceptance criteria",
+    "body": "Implements FLT-2011.",
+    "changedFiles": [
+      "tests/e2e/flt-2011.spec.ts"
+    ],
+    "state": "merged",
+    "referencedIssues": [
+      "FLT-2011"
+    ]
+  }
+}

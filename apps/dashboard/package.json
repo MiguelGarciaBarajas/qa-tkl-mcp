@@ -1,0 +1,37 @@
+{
+  "name": "@tkl/dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --noEmit",
+    "lint": "oxlint",
+    "test": "vitest run",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^26.5.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jsdom": "^30.0.1",
+    "oxlint": "1.82.0",
+    "typescript": "~7.0.2",
+    "vite": "8.3.0",
+    "vitest": "^5.0.0"
+  },
+  "optionalDependencies": {
+    "@oxlint/binding-linux-x64-gnu": "1.82.0",
+    "@rolldown/binding-linux-x64-gnu": "1.2.8",
+    "lightningcss-linux-x64-gnu": "1.33.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@tkl/sync-coordinator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Scheduled incremental sync orchestration, durable checkpoint recovery, replay procedures, and non-destructive retention reporting (OPS-101)",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "node --check src/index.js && node --check src/coordinator.js && node --check src/schedule.js && node --check src/retention.js && node --check src/locks.js && node --check src/sanitize.js && node --check src/errors.js && node --check src/reconcile.js && node --check src/rebuild.js && node --check bin/run-sync.js && node --check bin/run-maintenance.js",
+    "typecheck": "node --check src/index.js && node --check src/coordinator.js && node --check src/schedule.js && node --check src/retention.js && node --check src/locks.js && node --check src/sanitize.js && node --check src/errors.js && node --check src/reconcile.js && node --check src/rebuild.js && node --check bin/run-sync.js && node --check bin/run-maintenance.js",
+    "lint": "node --check src/index.js && node --check src/coordinator.js && node --check src/schedule.js && node --check src/retention.js && node --check src/locks.js && node --check src/sanitize.js && node --check src/errors.js && node --check src/reconcile.js && node --check src/rebuild.js && node --check bin/run-sync.js && node --check bin/run-maintenance.js",
+    "test": "node --experimental-strip-types --test test/*.test.js",
+    "test:contract": "node --experimental-strip-types --test test/*.test.js"
+  },
+  "dependencies": {
+    "@tkl/contracts": "0.1.0",
+    "@tkl/ingestion": "0.1.0",
+    "@tkl/knowledge-store": "0.1.0",
+    "@tkl/raw-evidence-store": "0.1.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

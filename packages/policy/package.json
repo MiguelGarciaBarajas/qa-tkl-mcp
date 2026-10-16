@@ -1,0 +1,12 @@
+{
+  "name": "@tkl/policy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Authentication and authorization policy primitives for TKL",
+  "scripts": {
+    "build": "node --check src/index.js",
+    "test": "node --experimental-strip-types --test",
+    "typecheck": "node --check src/index.js"
+  }
+}

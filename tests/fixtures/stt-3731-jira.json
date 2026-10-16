@@ -1,0 +1,19 @@
+{
+  "issue": {
+    "key": "STT-3731",
+    "summary": "FL Modernization",
+    "issueType": "Epic",
+    "status": "In Progress",
+    "project": "Solera Titling",
+    "description": null,
+    "updated": "2026-09-10T11:43:07.483-0400"
+  },
+  "comments": [
+    {
+      "id": "retest-20260815-1215",
+      "created": "2026-08-15T09:08:00.065-0400",
+      "summary": "Full-lane super-retest in QAE",
+      "body": "44 cards: 36 passed, 7 required product or fixture decisions, and 1 was a real defect. The retest reported a billing API response with HTTP 200 but zero billed amount and no fee lines for invoiced deals, while the billing UI showed fees. It also identified fixture scarcity and missing worker observability."
+    }
+  ]
+}

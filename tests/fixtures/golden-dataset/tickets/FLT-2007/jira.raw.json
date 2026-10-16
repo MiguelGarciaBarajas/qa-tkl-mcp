@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2007",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2007",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "36da36719a1e93e9095a88940059688759486eafc6a1efe0b0739b10b009bdff",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2007",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a system I can notify the electronic lien holder on release",
+      "description": "As a system I can notify the electronic lien holder on release. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a lien release event, the ELT holder receives a notification within 24 hours.",
+        "Given a failed notification, the event is retried up to 3 times."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

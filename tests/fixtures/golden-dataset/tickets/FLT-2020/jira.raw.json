@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2020",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2020",
+  "observedAt": "2026-08-06T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "7cfbe1e353a7d315686960945f01875d86fb938aed57c15b8d4cbeb5abe409b6",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2020",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can apply an odometer discrepancy hold",
+      "description": "As a clerk I can apply an odometer discrepancy hold. The verifying pull request only mentions this ticket in free text.",
+      "acceptanceCriteria": [
+        "Given conflicting odometer readings, a hold is placed on the title."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

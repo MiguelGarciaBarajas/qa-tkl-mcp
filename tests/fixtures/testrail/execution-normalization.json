@@ -1,0 +1,39 @@
+{
+  "run": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "testrail",
+    "sourceId": "77",
+    "sourceVersion": "1789056120",
+    "sourceUrl": "https://testrail.example/index.php?/runs/view/77",
+    "observedAt": "2026-09-15T12:02:00.000Z",
+    "contentType": "testrail.run",
+    "contentHash": "sha256-fixture-testrail-run-77",
+    "classification": "internal",
+    "payload": {
+      "id": 77,
+      "name": "Sanitized regression execution",
+      "suite_id": 12,
+      "updated_on": 1789056120
+    }
+  },
+  "result": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "testrail",
+    "sourceId": "7701",
+    "sourceVersion": "1789056180",
+    "sourceUrl": "https://testrail.example/index.php?/results/view/7701",
+    "observedAt": "2026-09-15T12:03:00.000Z",
+    "contentType": "testrail.result",
+    "contentHash": "sha256-fixture-testrail-result-7701",
+    "classification": "internal",
+    "payload": {
+      "id": 7701,
+      "run_id": 77,
+      "case_id": 1201,
+      "status_id": 1,
+      "created_on": 1789056180
+    }
+  }
+}

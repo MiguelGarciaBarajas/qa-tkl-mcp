@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2010",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2010",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "b7361c3bd5378533bacb1b130959344923865e165f875d3cb863f789116efcf9",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2010",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can apply a court order to a disputed title",
+      "description": "As a clerk I can apply a court order to a disputed title. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a valid court order document, the disputed hold is lifted."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

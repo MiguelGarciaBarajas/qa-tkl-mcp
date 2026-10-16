@@ -1,0 +1,11 @@
+{
+  "ticketKey": "FLT-2018",
+  "category": "no-evidence",
+  "requirementId": "requirement:FLT-2018",
+  "hasJiraConflictRevision": false,
+  "expectedDenominator": 2,
+  "expectedExplicitTraceLinkCount": 0,
+  "expectedCovered": false,
+  "expectedConflict": false,
+  "notes": "No GitHub evidence exists at all; coverage should correctly report zero."
+}

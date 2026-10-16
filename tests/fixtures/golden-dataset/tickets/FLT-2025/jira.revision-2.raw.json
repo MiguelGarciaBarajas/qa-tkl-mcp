@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2025",
+  "sourceVersion": "2",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2025",
+  "observedAt": "2026-08-12T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "1de0766fb99b443d3890e7a9975cb153efadaa0b1d9ae5420ee4d20869b236f6",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2025",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can reject a title application with a stop-sale hold",
+      "description": "As a clerk I can reject a title application with a stop-sale hold. Two independently reviewed evidence versions disagree.",
+      "acceptanceCriteria": [
+        "Given an active stop-sale hold, the application is rejected silently for audit review."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

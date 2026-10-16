@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2009",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2009",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "5942e761ddf4db7268c69008a2fabf87bdfd7904453e79ed475f860ce456be9d",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2009",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can register a repossessed vehicle title",
+      "description": "As a clerk I can register a repossessed vehicle title. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a valid repossession affidavit, the title transfers to the lender.",
+        "Given a missing affidavit, the transfer is blocked."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

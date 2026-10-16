@@ -1,0 +1,39 @@
+{
+  "suite": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "testrail",
+    "sourceId": "12",
+    "sourceVersion": "1789056000",
+    "sourceUrl": "https://testrail.example/index.php?/suites/view/12",
+    "observedAt": "2026-09-15T12:00:00.000Z",
+    "contentType": "testrail.suite",
+    "contentHash": "sha256-fixture-testrail-suite-12",
+    "classification": "internal",
+    "payload": {
+      "id": 12,
+      "name": "Sanitized title workflow regression",
+      "updated_on": 1789056000
+    }
+  },
+  "case": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "testrail",
+    "sourceId": "1201",
+    "sourceVersion": "1789056060",
+    "sourceUrl": "https://testrail.example/index.php?/cases/view/1201",
+    "observedAt": "2026-09-15T12:01:00.000Z",
+    "contentType": "testrail.case",
+    "contentHash": "sha256-fixture-testrail-case-1201",
+    "classification": "internal",
+    "payload": {
+      "id": 1201,
+      "suite_id": 12,
+      "title": "Verify a sanitized title workflow",
+      "type_id": 1,
+      "priority_id": 2,
+      "updated_on": 1789056060
+    }
+  }
+}

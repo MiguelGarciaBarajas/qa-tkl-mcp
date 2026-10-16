@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2022",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2022",
+  "observedAt": "2026-08-06T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "32ffcb08db86fa643032463a33b25951435b81a81b73ff3fd9b19e97cbc7c30e",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2022",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can record a name change on an existing title",
+      "description": "As a clerk I can record a name change on an existing title. The verifying pull request only mentions this ticket in free text.",
+      "acceptanceCriteria": [
+        "Given a legal name-change document, the title reflects the new name without re-titling fees."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2023",
+  "sourceVersion": "2",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2023",
+  "observedAt": "2026-08-12T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "36ce9ea4fae20f50142599e6e40284ceaa32c3e6770537c2c73fff763893b4d8",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2023",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can set a title's brand designation",
+      "description": "As a clerk I can set a title's brand designation. Two independently reviewed evidence versions disagree.",
+      "acceptanceCriteria": [
+        "Given a flood-damage inspection report, the title is branded 'flood damage' with a distinct visual marker."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

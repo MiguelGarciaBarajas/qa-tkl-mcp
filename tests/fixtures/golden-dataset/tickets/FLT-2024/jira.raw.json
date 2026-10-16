@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2024",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2024",
+  "observedAt": "2026-08-08T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "0506b72b3d8345a6acbf692abd6e2c5d8e472cb9f8e2f18f7a84234d315be67d",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2024",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can apply a mileage exemption to an antique vehicle title",
+      "description": "As a clerk I can apply a mileage exemption to an antique vehicle title. Two independently reviewed evidence versions disagree.",
+      "acceptanceCriteria": [
+        "Given a vehicle older than 20 model years, the odometer disclosure is exempt."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

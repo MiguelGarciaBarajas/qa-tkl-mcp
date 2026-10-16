@@ -1,0 +1,16 @@
+{
+  "name": "@tkl/mcp-gateway",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": { ".": "./src/index.js" },
+  "scripts": {
+    "build": "node --check src/client.js && node --check src/errors.js && node --check src/gateway.js && node --check src/http.js && node --check src/index.js && node --check src/oauth-metadata.js && node --check src/protocol.js && node --check src/server.js && node --check src/sessions.js",
+    "typecheck": "node --check src/client.js && node --check src/errors.js && node --check src/gateway.js && node --check src/http.js && node --check src/index.js && node --check src/oauth-metadata.js && node --check src/protocol.js && node --check src/server.js && node --check src/sessions.js",
+    "test": "node --experimental-strip-types --test",
+    "test:contract": "node --experimental-strip-types --test",
+    "lint": "node --check src/client.js && node --check src/errors.js && node --check src/gateway.js && node --check src/http.js && node --check src/index.js && node --check src/oauth-metadata.js && node --check src/protocol.js && node --check src/server.js && node --check src/sessions.js",
+    "start": "node --experimental-strip-types src/server.js"
+  },
+  "dependencies": { "@tkl/core": "0.3.0" }
+}

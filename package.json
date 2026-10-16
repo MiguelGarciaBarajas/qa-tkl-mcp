@@ -1,0 +1,38 @@
+{
+  "name": "qa-tkl-mcp-f5",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Modular Test Knowledge Library with a thin MCP gateway",
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "plugins/connectors/*",
+    "plugins/normalizers/*",
+    "plugins/analyzers/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present && tsc -p tests/e2e/tsconfig.json",
+    "test": "npm run test --workspaces --if-present",
+    "test:integration": "node --experimental-strip-types --test tests/integration/*.test.js",
+    "test:contract": "npm run test:contract --workspaces --if-present && node --experimental-strip-types --test tests/contract/**/*.test.ts",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install chromium",
+    "lint": "npm run lint --workspaces --if-present && npm run lint:scripts",
+    "lint:scripts": "node --check scripts/ci/quality-gate.mjs && node --check scripts/ci/secret-scan.mjs && node --check scripts/ci/dependency-audit.mjs && node --check scripts/ci/print-playwright-version.mjs && node --check scripts/ci/lib/exec.mjs && node --check scripts/ci/lib/mini-yaml.mjs",
+    "gate": "node scripts/ci/quality-gate.mjs",
+    "scan:secrets": "node scripts/ci/secret-scan.mjs",
+    "audit:deps": "node scripts/ci/dependency-audit.mjs",
+    "smoke:live": "node --experimental-strip-types packages/live-smoke/bin/run.js",
+    "sync:run": "node --experimental-strip-types packages/sync-coordinator/bin/run-sync.js",
+    "maintenance:run": "node --experimental-strip-types packages/sync-coordinator/bin/run-maintenance.js"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "typescript": "~7.0.2"
+  }
+}

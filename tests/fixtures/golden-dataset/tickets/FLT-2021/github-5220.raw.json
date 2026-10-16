@@ -1,0 +1,21 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "github",
+  "sourceId": "Solera-Engineering/fl-titling#5220",
+  "sourceVersion": "edc5ea8f7f80a64b350befac9f47389727f959ee",
+  "sourceUrl": "https://github.com/Solera-Engineering/fl-titling/pull/5220",
+  "observedAt": "2026-08-07T09:00:00.000Z",
+  "contentType": "application/vnd.github.pull-request+json",
+  "contentHash": "b87c7990a004a2b6bb0e5d8a104e0c0d81db9d277c5d7a1e306e1d4956049bd8",
+  "classification": "internal",
+  "payload": {
+    "number": 5220,
+    "title": "Add regression coverage (see FLT-2021 in Jira)",
+    "body": "This closes out the remaining work discussed in FLT-2021, no structured issue link was set on this PR.",
+    "changedFiles": [
+      "tests/e2e/flt-2021.spec.ts"
+    ],
+    "state": "merged"
+  }
+}

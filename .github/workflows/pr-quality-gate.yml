@@ -1,0 +1,175 @@
+name: PR Quality Gate
+
+# QA-101: the single protected quality gate for this repository.
+#
+# Design rules:
+# - Deterministic: `npm ci` against the committed lockfile, a pinned Node version from
+#   `.nvmrc`, and third-party actions pinned to immutable commit SHAs.
+# - Least privilege: the workflow is read-only (`contents: read`) and never persists the
+#   checkout credential.
+# - One install: every command that needs `node_modules` runs in the `quality-gate` job,
+#   so the expensive `npm ci` plus Playwright browser download happens exactly once.
+#   The supply-chain job deliberately needs neither and runs in parallel.
+# - No live sources: nothing here contacts Jira, GitHub APIs, TestRail, or any deployed
+#   environment, and no job consumes a source credential. `npm run smoke:live`
+#   (LIVE-101) stays opt-in and is never invoked by CI.
+#
+# The local equivalent is `npm run gate` (see docs/runbooks/ci-quality-gate.md).
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  schedule:
+    # Weekly re-run so newly published advisories fail the gate even without a push.
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "pr-quality-gate-${{ github.ref }}"
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  supply-chain:
+    name: "Supply chain (secret scan + dependency audit)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        # Full history so a pull request's added lines can be scanned even when a later
+        # commit on the same branch removed them again.
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+
+      - name: Scan tracked files for committed secrets
+        run: node scripts/ci/secret-scan.mjs
+
+      - name: Scan lines added by this pull request
+        if: github.event_name == 'pull_request'
+        run: node scripts/ci/secret-scan.mjs --diff-base "origin/${{ github.base_ref }}"
+
+      - name: Enforce the dependency audit policy
+        # Resolves advisories from the registry against the committed lockfile. It fails
+        # closed when the registry cannot be reached; it never reports "no findings"
+        # because a lookup failed.
+        run: node scripts/ci/dependency-audit.mjs
+
+  quality-gate:
+    name: "Quality gate (lint, typecheck, build, unit, contract, integration, e2e)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
+    env:
+      CI: "true"
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Resolve the locked Playwright version
+        id: playwright
+        run: node scripts/ci/print-playwright-version.mjs >> "$GITHUB_OUTPUT"
+
+      - name: Restore the Playwright browser cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: "playwright-${{ runner.os }}-chromium-${{ steps.playwright.outputs.version }}"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install the Chromium browser and its system dependencies
+        # Idempotent: on a cache hit the browser download is skipped, but the OS-level
+        # libraries the runner needs are still installed, so a restored cache can never
+        # produce a half-working browser.
+        run: npx playwright install --with-deps chromium
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Unit tests
+        run: npm test
+
+      - name: Contract tests
+        run: npm run test:contract
+
+      - name: Integration tests
+        run: npm run test:integration
+
+      - name: End-to-end tests (real Chromium)
+        run: npm run test:e2e
+
+      - name: Upload the Playwright report
+        if: failure()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: "playwright-report-${{ github.run_id }}-${{ github.run_attempt }}"
+          path: |
+            playwright-report
+            test-results
+          if-no-files-found: ignore
+          retention-days: 7
+
+  required-checks:
+    name: "Required checks"
+    # Single stable status name for branch protection. Adding or renaming a job above
+    # only requires updating this job's `needs` list, not the protected branch rule.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions: {}
+    needs:
+      - supply-chain
+      - quality-gate
+    if: always()
+    steps:
+      - name: Assert every gate succeeded
+        env:
+          SUPPLY_CHAIN_RESULT: ${{ needs.supply-chain.result }}
+          QUALITY_GATE_RESULT: ${{ needs.quality-gate.result }}
+        run: |
+          set -euo pipefail
+          failed=0
+          for gate in "supply-chain:${SUPPLY_CHAIN_RESULT}" "quality-gate:${QUALITY_GATE_RESULT}"; do
+            name="${gate%%:*}"
+            result="${gate#*:}"
+            echo "${name}: ${result}"
+            if [ "${result}" != "success" ]; then
+              failed=1
+            fi
+          done
+          if [ "${failed}" -ne 0 ]; then
+            echo "::error::At least one required gate did not succeed."
+            exit 1
+          fi
+          echo "All required gates succeeded."

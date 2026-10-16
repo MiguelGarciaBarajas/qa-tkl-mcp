@@ -1,0 +1,24 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "github",
+  "sourceId": "Solera-Engineering/fl-titling#5114",
+  "sourceVersion": "36ccd816fda345378f60fa85c1d74faf25f4a54b",
+  "sourceUrl": "https://github.com/Solera-Engineering/fl-titling/pull/5114",
+  "observedAt": "2026-08-10T09:00:00.000Z",
+  "contentType": "application/vnd.github.pull-request+json",
+  "contentHash": "bb5943c80bed91f603f8cdbe7fc462b96ac2996d28479751786e3e04a34d8074",
+  "classification": "internal",
+  "payload": {
+    "number": 5114,
+    "title": "Fix edge case for FLT-2014",
+    "body": "Implements FLT-2014.",
+    "changedFiles": [
+      "tests/e2e/flt-2014.spec.ts"
+    ],
+    "state": "merged",
+    "referencedIssues": [
+      "FLT-2014"
+    ]
+  }
+}

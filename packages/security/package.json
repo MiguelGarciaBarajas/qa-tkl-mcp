@@ -1,0 +1,12 @@
+{
+  "name": "@tkl/security",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Request and transport security controls for TKL boundaries",
+  "scripts": {
+    "build": "node --check src/index.js",
+    "test": "node --experimental-strip-types --test",
+    "typecheck": "node --check src/index.js"
+  }
+}

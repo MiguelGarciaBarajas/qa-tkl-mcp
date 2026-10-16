@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2016",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2016",
+  "observedAt": "2026-08-05T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "b524de25f59485f42ac5e3cf814aa0bf8a274c5ede1594898ab7667b8aebc1ca",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2016",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can attach a power of attorney to a title application",
+      "description": "As a clerk I can attach a power of attorney to a title application. No test evidence has been linked yet.",
+      "acceptanceCriteria": [
+        "Given a notarized power of attorney, the application proceeds without the owner's signature.",
+        "Given an unnotarized document, the application is rejected."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

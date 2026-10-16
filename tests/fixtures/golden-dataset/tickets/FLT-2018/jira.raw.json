@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2018",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2018",
+  "observedAt": "2026-08-05T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "eb64d7a15392540674f12ee3c83d8a930d1bf4f080f65b5596a8beae466cd83b",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2018",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can process a title for an abandoned vehicle claim",
+      "description": "As a clerk I can process a title for an abandoned vehicle claim. No test evidence has been linked yet.",
+      "acceptanceCriteria": [
+        "Given a completed abandonment hold period, the title transfers to the claimant.",
+        "Given an active dispute, the transfer is blocked."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

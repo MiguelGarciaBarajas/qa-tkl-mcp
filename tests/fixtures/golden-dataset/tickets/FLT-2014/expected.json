@@ -1,0 +1,11 @@
+{
+  "ticketKey": "FLT-2014",
+  "category": "clean-multi-pr",
+  "requirementId": "requirement:FLT-2014",
+  "hasJiraConflictRevision": false,
+  "expectedDenominator": 2,
+  "expectedExplicitTraceLinkCount": 2,
+  "expectedCovered": true,
+  "expectedConflict": false,
+  "notes": "Two explicit PR references; numerator should be capped at the denominator, not double-counted."
+}

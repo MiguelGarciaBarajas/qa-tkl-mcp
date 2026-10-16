@@ -1,0 +1,14 @@
+{
+  "documentation": "docs/runbooks/ci-quality-gate.md",
+  "purpose": "Time-boxed, reviewed exceptions to the dependency audit policy enforced by scripts/ci/dependency-audit.mjs. An empty list means no advisory is currently waived. A waiver never hides a finding: waived advisories are still printed, and an expired or malformed waiver fails the gate.",
+  "entrySchema": {
+    "id": "Advisory identifier exactly as reported by npm audit, for example GHSA-xxxx-xxxx-xxxx.",
+    "package": "npm package name the advisory applies to.",
+    "scope": "production | development",
+    "reason": "Why this finding is not actionable right now, in one factual sentence.",
+    "approvedBy": "Name of the reviewer who accepted the risk.",
+    "approvedOn": "YYYY-MM-DD",
+    "expires": "YYYY-MM-DD, at most 90 days after approvedOn. After this date the gate fails again."
+  },
+  "waivers": []
+}

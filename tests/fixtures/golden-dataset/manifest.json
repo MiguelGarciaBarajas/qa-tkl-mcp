@@ -1,0 +1,115 @@
+{
+  "datasetVersion": "2026.09-fl-titling-golden-v1",
+  "productId": "fl-titling",
+  "asOf": "2026-09-15T00:00:00.000Z",
+  "description": "Synthetic, sanitized FL Titling tickets used to evaluate the knowledge/traceability pipeline (normalizers + coverage/conflict analyzers). Regenerate via packages/evaluation/scripts/generate-golden-dataset.ts.",
+  "categories": {
+    "clean-single-pr": "One Jira story fully covered by one explicitly-referencing GitHub PR.",
+    "clean-multi-pr": "One Jira story covered by two explicitly-referencing GitHub PRs.",
+    "no-evidence": "Jira story with no GitHub evidence recorded yet.",
+    "prose-only-reference": "GitHub PR mentions the ticket only in free text, not in structured referencedIssues/ticketKey fields - exposes a normalizer recall gap.",
+    "conflicting-claims": "A second, independently-approved Jira revision disagrees with the first, so the conflict analyzer must flag it."
+  },
+  "tickets": [
+    {
+      "key": "FLT-2001",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2002",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2003",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2004",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2005",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2006",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2007",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2008",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2009",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2010",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2011",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2012",
+      "category": "clean-single-pr"
+    },
+    {
+      "key": "FLT-2013",
+      "category": "clean-multi-pr"
+    },
+    {
+      "key": "FLT-2014",
+      "category": "clean-multi-pr"
+    },
+    {
+      "key": "FLT-2015",
+      "category": "clean-multi-pr"
+    },
+    {
+      "key": "FLT-2016",
+      "category": "no-evidence"
+    },
+    {
+      "key": "FLT-2017",
+      "category": "no-evidence"
+    },
+    {
+      "key": "FLT-2018",
+      "category": "no-evidence"
+    },
+    {
+      "key": "FLT-2019",
+      "category": "prose-only-reference"
+    },
+    {
+      "key": "FLT-2020",
+      "category": "prose-only-reference"
+    },
+    {
+      "key": "FLT-2021",
+      "category": "prose-only-reference"
+    },
+    {
+      "key": "FLT-2022",
+      "category": "prose-only-reference"
+    },
+    {
+      "key": "FLT-2023",
+      "category": "conflicting-claims"
+    },
+    {
+      "key": "FLT-2024",
+      "category": "conflicting-claims"
+    },
+    {
+      "key": "FLT-2025",
+      "category": "conflicting-claims"
+    }
+  ]
+}

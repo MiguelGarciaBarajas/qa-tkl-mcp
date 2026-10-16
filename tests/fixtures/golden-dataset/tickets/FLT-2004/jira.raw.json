@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2004",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2004",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "d5f0254c8b462dc507b0bfb366f49cf68b9936a25846428c2aac7b6d8c68ae50",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2004",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can flag a title as salvage",
+      "description": "As a clerk I can flag a title as salvage. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given an insurance total-loss code, the title is marked salvage.",
+        "Given a salvage title, it cannot be re-issued as clean without an inspection record."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2008",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2008",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "61b4129f73ee09b37cc61d14843139ae0723ed20ad4f161f552d2ffeeb49b2a6",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2008",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can correct a VIN typo on an issued title",
+      "description": "As a clerk I can correct a VIN typo on an issued title. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a documented clerical error, the VIN can be corrected without re-titling fees.",
+        "Given no supporting documentation, the correction request is rejected."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

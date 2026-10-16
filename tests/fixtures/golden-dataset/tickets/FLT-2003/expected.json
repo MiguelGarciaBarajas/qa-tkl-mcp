@@ -1,0 +1,11 @@
+{
+  "ticketKey": "FLT-2003",
+  "category": "clean-single-pr",
+  "requirementId": "requirement:FLT-2003",
+  "hasJiraConflictRevision": false,
+  "expectedDenominator": 2,
+  "expectedExplicitTraceLinkCount": 1,
+  "expectedCovered": true,
+  "expectedConflict": false,
+  "notes": "One explicit PR reference; coverage should be fully detected."
+}

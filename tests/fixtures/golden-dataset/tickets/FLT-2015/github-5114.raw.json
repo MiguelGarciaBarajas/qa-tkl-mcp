@@ -1,0 +1,24 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "github",
+  "sourceId": "Solera-Engineering/fl-titling#5114",
+  "sourceVersion": "a0a996b5ba0a6850c7e3627b551ea461aac0f880",
+  "sourceUrl": "https://github.com/Solera-Engineering/fl-titling/pull/5114",
+  "observedAt": "2026-08-04T09:00:00.000Z",
+  "contentType": "application/vnd.github.pull-request+json",
+  "contentHash": "29508e91f7bb3d00aa52f9949cb253a5885bb480c104f98a9b80b8df7838c5fd",
+  "classification": "internal",
+  "payload": {
+    "number": 5114,
+    "title": "Implement FLT-2015",
+    "body": "Implements FLT-2015.",
+    "changedFiles": [
+      "tests/e2e/flt-2015.spec.ts"
+    ],
+    "state": "merged",
+    "referencedIssues": [
+      "FLT-2015"
+    ]
+  }
+}

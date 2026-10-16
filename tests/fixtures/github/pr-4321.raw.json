@@ -1,0 +1,20 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "github",
+  "sourceId": "Solera-Engineering/fl-titling#4321",
+  "sourceVersion": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4",
+  "sourceUrl": "https://github.com/Solera-Engineering/fl-titling/pull/4321",
+  "observedAt": "2026-09-02T09:30:00.000Z",
+  "contentType": "application/vnd.github.pull-request+json",
+  "contentHash": "sha256-fixture-pr-4321",
+  "classification": "internal",
+  "payload": {
+    "number": 4321,
+    "title": "Add VIN checksum validation test",
+    "body": "Verifies STT-1234 acceptance criteria for VIN checksum rejection.",
+    "changedFiles": ["tests/e2e/vin-validation.spec.ts"],
+    "referencedIssues": ["STT-1234"],
+    "state": "merged"
+  }
+}

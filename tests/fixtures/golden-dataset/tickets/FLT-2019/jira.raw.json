@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2019",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2019",
+  "observedAt": "2026-08-06T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "96ba6c4227f4f80ccb17de04bf229855525296d54684f165ea04d2636c5eb429",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2019",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can void an erroneous title fee charge",
+      "description": "As a clerk I can void an erroneous title fee charge. The verifying pull request only mentions this ticket in free text.",
+      "acceptanceCriteria": [
+        "Given a documented billing error, the fee is voided and refunded.",
+        "Given no documentation, the void request is rejected."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

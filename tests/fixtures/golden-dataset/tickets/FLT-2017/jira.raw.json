@@ -1,0 +1,28 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2017",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2017",
+  "observedAt": "2026-08-05T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "d2e4cb1ff77da4ce355fefa0f0cc56152679220657f383f5e0e089cc7baa831b",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2017",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can register a custom-built kit vehicle",
+      "description": "As a clerk I can register a custom-built kit vehicle. No test evidence has been linked yet.",
+      "acceptanceCriteria": [
+        "Given a completed kit manufacturer affidavit, a new title is issued."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

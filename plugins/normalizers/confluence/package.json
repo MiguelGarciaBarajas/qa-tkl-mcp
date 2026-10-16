@@ -1,0 +1,25 @@
+{
+  "name": "@tkl/normalizer-confluence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Normalizes Confluence RawEvidenceRecords carrying a requirement label into canonical requirement entities and claims (Knowledge and Traceability).",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "dependencies": {
+    "@tkl/contracts": "0.1.0"
+  },
+  "scripts": {
+    "build": "node --check src/index.js && node --experimental-strip-types --check src/normalizer.ts",
+    "typecheck": "node --check src/index.js && node --experimental-strip-types --check src/normalizer.ts",
+    "test": "node --experimental-strip-types --test src/**/*.test.ts",
+    "test:contract": "node --experimental-strip-types --test src/**/*.test.ts",
+    "lint": "node --check src/index.js && node --experimental-strip-types --check src/normalizer.ts"
+  },
+  "engines": {
+    "node": ">=22.6"
+  }
+}

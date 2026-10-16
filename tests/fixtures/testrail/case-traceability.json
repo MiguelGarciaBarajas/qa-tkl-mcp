@@ -1,0 +1,26 @@
+{
+  "case": {
+    "tenantId": "solera",
+    "productId": "fl-titling",
+    "source": "testrail",
+    "sourceId": "1202",
+    "sourceVersion": "1789056100",
+    "observedAt": "2026-09-15T12:01:00.000Z",
+    "contentType": "testrail.case",
+    "contentHash": "sha256-fixture-testrail-case-1202",
+    "payload": {
+      "id": 1202,
+      "suite_id": 12,
+      "title": "Verify a linked title workflow",
+      "custom_jira_references": [
+        "STT-1234",
+        "STT-1234"
+      ],
+      "custom_github_automation": [
+        "test:github:4321",
+        "test:github:4321"
+      ]
+    },
+    "classification": "internal"
+  }
+}

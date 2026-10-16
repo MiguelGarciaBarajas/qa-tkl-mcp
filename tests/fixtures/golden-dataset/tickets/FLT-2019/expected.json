@@ -1,0 +1,11 @@
+{
+  "ticketKey": "FLT-2019",
+  "category": "prose-only-reference",
+  "requirementId": "requirement:FLT-2019",
+  "hasJiraConflictRevision": false,
+  "expectedDenominator": 2,
+  "expectedExplicitTraceLinkCount": 0,
+  "expectedCovered": true,
+  "expectedConflict": false,
+  "notes": "PR references the ticket only in prose; current GitHubNormalizer cannot detect this - expected FN."
+}

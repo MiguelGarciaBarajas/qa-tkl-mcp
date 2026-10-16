@@ -1,0 +1,25 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "STT-1234",
+  "sourceVersion": "3",
+  "sourceUrl": "https://example.atlassian.net/browse/STT-1234",
+  "observedAt": "2026-09-01T12:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "sha256-fixture-stt-1234-v3",
+  "classification": "internal",
+  "payload": {
+    "key": "STT-1234",
+    "fields": {
+      "issuetype": { "name": "Story" },
+      "summary": "As a clerk I can submit a title application with a valid VIN",
+      "description": "The system must reject submissions with an invalid VIN checksum.",
+      "acceptanceCriteria": [
+        "Given a valid 17-character VIN, the application is accepted.",
+        "Given an invalid VIN checksum, the application is rejected with an error."
+      ],
+      "status": { "name": "Done" }
+    }
+  }
+}

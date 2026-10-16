@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2014",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2014",
+  "observedAt": "2026-08-03T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "a7004a4bcce48f2ca777485edf2520ca176a8c51f93aa7e1f14b22408028974a",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2014",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can reinstate a suspended title after fee payment",
+      "description": "As a clerk I can reinstate a suspended title after fee payment. Two pull requests, an initial implementation and a follow-up fix, both explicitly reference this ticket.",
+      "acceptanceCriteria": [
+        "Given full fee payment, the suspension is lifted within one business day.",
+        "Given partial payment, the suspension remains active."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

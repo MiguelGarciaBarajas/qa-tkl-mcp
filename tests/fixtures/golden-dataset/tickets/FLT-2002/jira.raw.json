@@ -1,0 +1,29 @@
+{
+  "tenantId": "solera",
+  "productId": "fl-titling",
+  "source": "jira",
+  "sourceId": "FLT-2002",
+  "sourceVersion": "1",
+  "sourceUrl": "https://example.atlassian.net/browse/FLT-2002",
+  "observedAt": "2026-08-01T09:00:00.000Z",
+  "contentType": "application/vnd.jira.issue+json",
+  "contentHash": "c365a03cb1dfffa4e2f7f8da34e33ac7657ed48aa3c4ef3f853bec3abe0fa59c",
+  "classification": "internal",
+  "payload": {
+    "key": "FLT-2002",
+    "fields": {
+      "issuetype": {
+        "name": "Story"
+      },
+      "summary": "As a clerk I can record a lien holder on a title application",
+      "description": "As a clerk I can record a lien holder on a title application. Evidence is fully traceable via one referencing pull request.",
+      "acceptanceCriteria": [
+        "Given a valid lien holder ID, the lien is attached to the title.",
+        "Given a duplicate lien holder, a warning is shown but the record still saves."
+      ],
+      "status": {
+        "name": "Done"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@tkl/ops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Deployment configuration validation, secret resolution, and audit destination wiring for TKL (OPS-102)",
+  "scripts": {
+    "build": "node --check src/index.js",
+    "test": "node --experimental-strip-types --test",
+    "typecheck": "node --check src/index.js"
+  }
+}

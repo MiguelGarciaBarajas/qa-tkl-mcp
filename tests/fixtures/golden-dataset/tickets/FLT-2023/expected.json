@@ -1,0 +1,11 @@
+{
+  "ticketKey": "FLT-2023",
+  "category": "conflicting-claims",
+  "requirementId": "requirement:FLT-2023",
+  "hasJiraConflictRevision": true,
+  "expectedDenominator": 1,
+  "expectedExplicitTraceLinkCount": 1,
+  "expectedCovered": true,
+  "expectedConflict": true,
+  "notes": "A second, independently-approved Jira revision disagrees with the first - the conflict analyzer must flag it."
+}

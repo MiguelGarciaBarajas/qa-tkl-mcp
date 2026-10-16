@@ -1,0 +1,28 @@
+{
+  "name": "@tkl/credential-vault",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tenant/product/source-scoped connector credential storage: sanitized connection metadata plus encrypted-at-rest credentials.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "build": "node --check src/index.js && node --experimental-strip-types --check src/store.ts && node --experimental-strip-types --check src/crypto.ts && node --experimental-strip-types --check src/persistent-store.ts && npm run verify-entry",
+    "typecheck": "node --check src/index.js && node --experimental-strip-types --check src/store.ts && node --experimental-strip-types --check src/crypto.ts && node --experimental-strip-types --check src/persistent-store.ts",
+    "test": "node --experimental-strip-types --test src/**/*.test.ts",
+    "test:contract": "node --experimental-strip-types --test src/**/*.test.ts",
+    "lint": "node --check src/index.js && node --experimental-strip-types --check src/store.ts && node --experimental-strip-types --check src/crypto.ts && node --experimental-strip-types --check src/persistent-store.ts",
+    "verify-entry": "node --experimental-strip-types -e \"import('@tkl/credential-vault').then((m)=>{ if (typeof m.InMemoryCredentialVault!=='function'||typeof m.createPersistentCredentialVault!=='function') { console.error('package entry point is missing expected exports'); process.exit(1); } console.log('credential-vault package entry point import verified'); }, (error)=>{ console.error(error); process.exit(1); })\""
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}
