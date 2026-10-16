@@ -31,7 +31,7 @@
   },
   "optionalDependencies": {
     "@oxlint/binding-linux-x64-gnu": "1.82.0",
-    "@rolldown/binding-linux-x64-gnu": "1.2.8",
+    "@rolldown/binding-linux-x64-gnu": "1.2.13",
     "lightningcss-linux-x64-gnu": "1.33.0"
   }
 }
